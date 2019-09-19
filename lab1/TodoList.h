@@ -1,6 +1,7 @@
 
 #ifndef TODO_LIST_H
 #define TODO_LIST_H
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -14,7 +15,7 @@ class TodoList {
     
     public:
     TodoList();    
-     ~TodoList();
+    ~TodoList();
     
     /*    *   Adds an item to the todo list with the data specified by the string "_duedate" and the task specified by "_task"    */    
      void add(string _duedate, string _task);    

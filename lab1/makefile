@@ -1,4 +1,4 @@
 all:
-	g++ main.cpp -o Todo.out TodoList.cpp
+	g++ -o Lab1 main.cpp TodoList.cpp
 clean:
-	rm Todo.out
+	rm -f Lab1
