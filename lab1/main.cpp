@@ -7,24 +7,32 @@ using namespace std;
 int main(int argc, char *argv[]){
     TodoList list;
     //cout << argv[1] << endl;
-    if(string(argv[1])  == "add")
-        list.add(argv[2], argv[3]);
+    
+    if (argc > 1){
+        if(string(argv[1])  == "add")
+            list.add(argv[2], argv[3]);
+            
+        else if(string(argv[1]) == "remove"){
+            int erasedSomething = list.remove(argv[2]);
+            if(erasedSomething)
+                cout << "Erased Succesfully" << endl;
+            else
+                cout << "Could not find task to erase" << endl;
+        }
         
-    else if(string(argv[1]) == "remove"){
-        int erasedSomething = list.remove(argv[2]);
-        if(erasedSomething)
-            cout << "Erased Succesfully" << endl;
+        else if(string(argv[1]) == "printList")
+            list.printTodoList();
+        
+        else if(string(argv[1]) == "printDay")
+            list.printDaysTasks(argv[2]);
+        
         else
-            cout << "Could not find task to erase" << endl;
-    }
-    
-    else if(string(argv[1]) == "printTodoList")
-        list.printTodoList();
-    
-    else if(string(argv[1]) == "printDay")
-        list.printDaysTasks(argv[2]);
-    
+            cout << "Invalid method call" << endl;
+        }
     else
-        cout << "Invalid method call" << endl;
+    {
+        cout << "Not enough arguments" << endl;
+    }
+
     return 0;
 }
