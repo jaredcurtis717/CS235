@@ -7,8 +7,8 @@
 using namespace std;
 
 class TodoListInterface {
-    public:    TodoListInterface() {}    
-    virtual ~TodoListInterface() {}
+    public:    TodoListInterface() 
+    virtual ~TodoListInterface() 
     
     /*    *   Adds an item to the todo list with the data specified by the string "_duedate" and the task specified by "_task"    */    
     virtual void add(string _duedate, string _task) = 0;    
