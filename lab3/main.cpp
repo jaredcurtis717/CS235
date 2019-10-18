@@ -132,7 +132,7 @@ int main(int argc, char *argv[]){
     for (int i = 0; i < M; i++) {
         state.push_back("");
     }
-    for (int i = 0; i < 500; i++) {
+    for (int i = 0; i < 100; i++) {
         int ind = rand() % wordMap[state].size();
         cout << wordMap[state][ind]<<" ";
         state.push_back(wordMap[state][ind]);
